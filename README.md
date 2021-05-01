@@ -21,10 +21,10 @@ there was a standard way of forming URLs to access resources.
 
 If you have been building applications for a while, there is a good chance that
 you have already worked with RESTful APIs. `json-server` follows REST
-conventions very strongly. Integrating a Facebook login, having something in
-your application post to Twitter, pulling in a feed of images from Instagram, or
-even calling a list of locations from Google Maps are all examples of using a
-RESTful API to communicate between applications.
+conventions very strongly. Having something in your application post to Twitter,
+pulling in a feed of images from Instagram, or even calling a list of locations
+from Google Maps are all examples of using a RESTful API to communicate between
+applications.
 
 ## Example REST Workflow
 
@@ -92,55 +92,57 @@ To implement each of the above actions, we combine an _HTTP verb_ (`GET`,
 `POST`, etc.) with a route (e.g., `/newsletters`). Rails then maps each HTTP
 verb/route combination to the appropriate _action_ (`show`, `edit`, etc.) in the
 `NewsletterController`. The table below shows the HTTP verb, route, and
-controller method names we would use for our RESTful newsletter app:
+controller action names we would use for our RESTful newsletter app:
 
 <table border="1" cellpadding="4" cellspacing="0">
   <tr>
     <th>HTTP Verb</th>
-    <th>Route</th>
-    <th>Action</th>
+    <th>Path</th>
+    <th>Controller#Action</th>
     <th>Description</th>
   </tr>
 
   <tr>
     <td>GET</td>
     <td>/newsletters</td>
-    <td>index</td>
+    <td>newsletters#index</td>
     <td>Show all newsletters</td>
   </tr>
   <tr>
     <td>POST</td>
     <td>/newsletters</td>
-    <td>create</td>
+    <td>newsletters#create</td>
     <td>Create a new newsletter</td>
   </tr>
   <tr>
     <td>GET</td>
     <td>/newsletters/:id</td>
-    <td>show</td>
-    <td>Show a single newsletter</td>
+    <td>newsletters#show</td>
+    <td>Show a specific newsletter</td>
   </tr>
   <tr>
     <td>PATCH or PUT</td>
     <td>/newsletters/:id</td>
-    <td>update</td>
-    <td>Update a newsletter</td>
+    <td>newsletters#update</td>
+    <td>Update a specific newsletter</td>
   </tr>
   <tr>
     <td>DELETE</td>
     <td>/newsletters/:id</td>
-    <td>destroy</td>
-    <td>Delete a newsletter</td>
+    <td>newsletters#destroy</td>
+    <td>Delete a specific newsletter</td>
   </tr>
 </table>
 
-Note that two of the routes appear more than once in the table above:
-`/newsletters` and `/newsletters/:id`. It is the **combination** of the _route_
-and the _HTTP verb_ that tells Rails which controller action to use.
+Note that even though we have five separate actions, there are only routes in
+the table above: `/newsletters` and `/newsletters/:id`. It is the
+**combination** of the _route_ and the _HTTP verb_ that tells Rails which
+controller action to use.
 
 Rails does a great job of integrating RESTful routes into its system. If you can
-understand routes in Rails, you can understand REST in general. All of the
-actions are wired up using RESTful routing nomenclature.
+understand routes in Rails, you can understand REST in general. Rails even gives
+us some built-in functionality to encourage using RESTful routing conventions,
+through the concept of [Resource Routing][resource-routing].
 
 Here is a diagram that shows how the views, controller actions, routes, and HTTP
 verbs are all mapped together:
@@ -195,4 +197,10 @@ Below are a few keys to remember when thinking about REST:
 
 - There are five RESTful route options we will commonly use as API developers.
 
+## Resources
+
+- [Resource Routing in Rails][resource-routing]
+- [RESTacular Routing Resource](https://restacular.netlify.app/)
+
 [put-v-patch]: https://blog.fullstacktraining.com/restful-api-design-post-vs-put-vs-patch/
+[resource-routing]: https://guides.rubyonrails.org/routing.html#resource-routing-the-rails-default
