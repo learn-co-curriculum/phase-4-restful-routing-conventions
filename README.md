@@ -183,7 +183,7 @@ each HTTP request unique behavior. Below is an explanation of each verb:
   identified by the Request URI. This means… that it deletes the record. It's
   nice and explicit.
 
-## Summary
+## Conclusion
 
 Below are a few keys to remember when thinking about REST:
 
@@ -199,6 +199,7 @@ Below are a few keys to remember when thinking about REST:
 
 ## Resources
 
+- [What RESTful Actually Means](https://codewords.recurse.com/issues/five/what-restful-actually-means)
 - [Resource Routing in Rails][resource-routing]
 - [RESTacular Routing Resource](https://restacular.netlify.app/)
 
