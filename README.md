@@ -147,7 +147,7 @@ through the concept of [Resource Routing][resource-routing].
 Here is a diagram that shows how the views, controller actions, routes, and HTTP
 verbs are all mapped together:
 
-![REST Diagram](rest-diagram.png)
+![REST Diagram](https://raw.githubusercontent.com/learn-co-curriculum/phase-4-restful-routing-conventions/master/rest-diagram.png)
 
 In analyzing the diagram, you can see the flow of data as follows:
 
