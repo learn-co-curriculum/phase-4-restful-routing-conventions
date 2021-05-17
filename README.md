@@ -21,10 +21,9 @@ there was a standard way of forming URLs to access resources.
 
 If you have been building applications for a while, there is a good chance that
 you have already worked with RESTful APIs. `json-server` follows REST
-conventions very strongly. Having something in your application post to Twitter,
-pulling in a feed of images from Instagram, or even calling a list of locations
-from Google Maps are all examples of using a RESTful API to communicate between
-applications.
+conventions very strongly. If your application posts to Twitter, pulls in a feed
+of images from Instagram, or calls a list of locations from Google Maps, you are
+using a RESTful API to communicate between applications.
 
 ## Example REST Workflow
 
@@ -97,7 +96,7 @@ controller action names we would use for our RESTful newsletter app:
 <table border="1" cellpadding="4" cellspacing="0">
   <tr>
     <th>HTTP Verb</th>
-    <th>Path</th>
+    <th>Route</th>
     <th>Controller#Action</th>
     <th>Description</th>
   </tr>
@@ -134,8 +133,8 @@ controller action names we would use for our RESTful newsletter app:
   </tr>
 </table>
 
-Note that even though we have five separate actions, there are only routes in
-the table above: `/newsletters` and `/newsletters/:id`. It is the
+Note that even though we have five separate actions, there are only two routes
+in the table above: `/newsletters` and `/newsletters/:id`. It is the
 **combination** of the _route_ and the _HTTP verb_ that tells Rails which
 controller action to use.
 
@@ -144,8 +143,8 @@ understand routes in Rails, you can understand REST in general. Rails even gives
 us some built-in functionality to encourage using RESTful routing conventions,
 through the concept of [Resource Routing][resource-routing].
 
-Here is a diagram that shows how the views, controller actions, routes, and HTTP
-verbs are all mapped together:
+Here is a diagram that shows how the routes, HTTP verbs, and controller actions
+are all mapped together:
 
 ![REST Diagram](https://raw.githubusercontent.com/learn-co-curriculum/phase-4-restful-routing-conventions/master/rest-diagram.png)
 
@@ -157,8 +156,8 @@ In analyzing the diagram, you can see the flow of data as follows:
    data to the proper controller action.
 
 3. The controller action either performs a task, such as creating, updating, or
-   deleting a record in the database, or it runs a database query and renders a
-   view to the client.
+   deleting a record in the database, or it runs a database query and returns
+   the requested information to the client.
 
 ## Definition of HTTP Verbs
 
