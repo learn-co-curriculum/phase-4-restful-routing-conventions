@@ -61,31 +61,13 @@ routes fall into four general categories: Create, Read, Update, and Delete,
 commonly known as 'CRUD' actions. The CRUD acronym gives us a convenient way to
 refer to the set of five actions that RESTful APIs potentially include:
 
-<table border="1" cellpadding="4" cellspacing="0">
-  <tr>
-    <th>CRUD category</th>
-    <th>Action(s)</th>
-  </tr>
-  <tr>
-    <td rowspan="2">READ</td>
-    <td>Display a list of all newsletters</td>
-  </tr>
-  <tr>
-    <td>Display an individual newsletter</td>
-  </tr>
-  <tr>
-    <td>CREATE</td>
-    <td>Create the new newsletter instance</td>
-  </tr>
-  <tr>
-    <td>UPDATE</td>
-    <td>Update the newsletter instance</td>
-  </tr>
-  <tr>
-    <td>DESTROY</td>
-    <td>Delete an existing newsletter instance</td>
-  </tr>
-</table>
+| CRUD category | Action(s) |
+| --- | --- |
+| READ | Display a list of all newsletters |
+| Display an individual newsletter |
+| CREATE | Create the new newsletter instance |
+| UPDATE | Update the newsletter instance |
+| DESTROY | Delete an existing newsletter instance |
 
 To implement each of the above actions, we combine an _HTTP verb_ (`GET`,
 `POST`, etc.) with a route (e.g., `/newsletters`). Rails then maps each HTTP
@@ -93,45 +75,13 @@ verb/route combination to the appropriate _action_ (`show`, `edit`, etc.) in the
 `NewsletterController`. The table below shows the HTTP verb, route, and
 controller action names we would use for our RESTful newsletter app:
 
-<table border="1" cellpadding="4" cellspacing="0">
-  <tr>
-    <th>HTTP Verb</th>
-    <th>Route</th>
-    <th>Controller#Action</th>
-    <th>Description</th>
-  </tr>
-
-  <tr>
-    <td>GET</td>
-    <td>/newsletters</td>
-    <td>newsletters#index</td>
-    <td>Show all newsletters</td>
-  </tr>
-  <tr>
-    <td>POST</td>
-    <td>/newsletters</td>
-    <td>newsletters#create</td>
-    <td>Create a new newsletter</td>
-  </tr>
-  <tr>
-    <td>GET</td>
-    <td>/newsletters/:id</td>
-    <td>newsletters#show</td>
-    <td>Show a specific newsletter</td>
-  </tr>
-  <tr>
-    <td>PATCH or PUT</td>
-    <td>/newsletters/:id</td>
-    <td>newsletters#update</td>
-    <td>Update a specific newsletter</td>
-  </tr>
-  <tr>
-    <td>DELETE</td>
-    <td>/newsletters/:id</td>
-    <td>newsletters#destroy</td>
-    <td>Delete a specific newsletter</td>
-  </tr>
-</table>
+| HTTP Verb | Route | Controller#Action | Description |
+| --- | --- | --- | --- |
+| GET | /newsletters | newsletters#index | Show all newsletters |
+| POST | /newsletters | newsletters#create | Create a new newsletter |
+| GET | /newsletters/:id | newsletters#show | Show a specific newsletter |
+| PATCH or PUT | /newsletters/:id | newsletters#update | Update a specific newsletter |
+| DELETE | /newsletters/:id | newsletters#destroy | Delete a specific newsletter |
 
 Note that even though we have five separate actions, there are only two routes
 in the table above: `/newsletters` and `/newsletters/:id`. It is the
