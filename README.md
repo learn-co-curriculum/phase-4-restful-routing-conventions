@@ -32,11 +32,11 @@ application. The following is a high-level view of how such an app might work:
 
 1. You fill out the form on the 'New Newsletter' page and click submit.
 
-2. Data concerning you, your newsletter content, and any additional information
-   such as media items is sent to the application server.
+2. Data concerning you as the author, your newsletter content, and any
+   additional information such as media items is sent to the application server.
 
 3. The server interprets the information, recognizes that the request is for a
-   new newsletter, generates the new record in the database, and performs myriad
+   new newsletter, generates the new record in the database, and performs
    background tasks (updating the newsletter counter, possibly sending
    notification emails, etc).
 
@@ -46,9 +46,8 @@ application. The following is a high-level view of how such an app might work:
    will say that the newsletter post went through properly, so the server sends
    a success message and tells the browser which page to go to and render.
 
-5. Lastly, the browser receives the server information and gives the user
-   feedback. In this case, it shows the user a message saying that their
-   newsletter was successfully posted.
+5. Lastly, the browser receives the server information and shows you a message
+   saying that your newsletter was successfully posted.
 
 ## RESTful Conventions in Rails
 
@@ -64,7 +63,7 @@ refer to the set of five actions that RESTful APIs potentially include:
 | CRUD category | Action(s) |
 | --- | --- |
 | READ | Display a list of all newsletters |
-| Display an individual newsletter |
+| | Display an individual newsletter |
 | CREATE | Create the new newsletter instance |
 | UPDATE | Update the newsletter instance |
 | DESTROY | Delete an existing newsletter instance |
@@ -105,8 +104,8 @@ In analyzing the diagram, you can see the flow of data as follows:
 2. The router in the application processes the request and 'routes' the request
    data to the proper controller action.
 
-3. The controller action either performs a task, such as creating, updating, or
-   deleting a record in the database, or it runs a database query and returns
+3. The controller action either performs a task — creating, updating, or
+   deleting a record in the database — or it runs a database query and returns
    the requested information to the client.
 
 ## Definition of HTTP Verbs
