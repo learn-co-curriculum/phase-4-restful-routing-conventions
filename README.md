@@ -145,6 +145,15 @@ Below are a few keys to remember when thinking about REST:
 
 - There are five RESTful route options we will commonly use as API developers.
 
+## Check For Understanding
+
+Before you move on, make sure you can answer the following questions:
+
+1. What are the CRUD actions?
+2. What HTTP verb(s) are associated with each CRUD action?
+3. What Rails controller action(s) are associated with each CRUD action?
+4. What two pieces of information need to be combined to create an HTTP request?
+
 ## Resources
 
 - [What RESTful Actually Means](https://codewords.recurse.com/issues/five/what-restful-actually-means)
