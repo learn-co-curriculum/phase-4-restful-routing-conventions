@@ -160,5 +160,5 @@ Before you move on, make sure you can answer the following questions:
 - [Resource Routing in Rails][resource-routing]
 - [RESTacular Routing Resource](https://restacular.netlify.app/)
 
-[put-v-patch]: https://blog.fullstacktraining.com/restful-api-design-post-vs-put-vs-patch/
+[put-v-patch]: https://rapidapi.com/blog/put-vs-patch/
 [resource-routing]: https://guides.rubyonrails.org/routing.html#resource-routing-the-rails-default
