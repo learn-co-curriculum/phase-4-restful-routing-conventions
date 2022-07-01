@@ -71,7 +71,7 @@ refer to the set of five actions that RESTful APIs potentially include:
 To implement each of the above actions, we combine an _HTTP verb_ (`GET`,
 `POST`, etc.) with a route (e.g., `/newsletters`). Rails then maps each HTTP
 verb/route combination to the appropriate _action_ (`show`, `edit`, etc.) in the
-`NewsletterController`. The table below shows the HTTP verb, route, and
+`NewslettersController`. The table below shows the HTTP verb, route, and
 controller action names we would use for our RESTful newsletter app:
 
 | HTTP Verb | Route | Controller#Action | Description |
